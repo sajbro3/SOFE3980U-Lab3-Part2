@@ -1,7 +1,7 @@
 pipeline {
     environment {
         SERVICE_ACCOUNT= credentials('service_account')    // secret file for the GCP credential JSON file. I set it manually in Jenkins credentials
-        PROJECT = credentials('arcane-talent-451515-n3')
+        PROJECT = credentials('BinaryCalculator_cicd')
         REPO_PATH= credentials("northamerica-northeast2-docker.pkg.dev/arcane-talent-451515-n3/sofe3980u/binarycalculator@sha256:d165dc3a7b6bda43aec0b07702053666e486c760c192fd4976edcead86a74a2b") // secret text for the repo path. I set it manually in Jenkins credentials
         APP_NAME = "binarycalculatorwebapp"
         IMAGE_TAG = "$REPO_PATH/$APP_NAME"
